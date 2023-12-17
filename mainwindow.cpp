@@ -20,11 +20,11 @@ MainWindow::~MainWindow()
 
 void MainWindow::recup_table()  //on défni la méthode recup_table()
 {
-    QSqlTableModel *Model;          //on crée un objet Model
-    Model = new QSqlTableModel;
-    Model->setTable("tablejeu");    //on récupère la tablejeu
-    Model->select();
-    ui->tableView->setModel(Model);   } //on affiche le contenu de la table dans le tableView
+    QSqlTableModel *Model;         //Déclaration d'une variable de type QSqlTableModel
+    Model = new QSqlTableModel;    //Création d'un nouvel objet QSqlTableModel
+    Model->setTable("tablejeu");    //Spécification de la table SQL à récupérer
+    Model->select();                //Récupération du contenu de la table
+    ui->tableView->setModel(Model);   } //Affichage du contenu de la table dans le widget tableView
 
 
 
