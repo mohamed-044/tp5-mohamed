@@ -11,9 +11,13 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     MainWindow w;
-    QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
-    db.setHostName("127.0.0.1");    //connection locale
+    QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");	//Pour utiliser sur Linux
     db.setDatabaseName("bddjeu");   //connection a la base de données bddjeu
+
+    //QSqlDatabase db = QSqlDatabase::addDatabase("QODBC3");                    //Pour utiliser sur Windows
+    //db.setDatabaseName("Driver={MySQL ODBC 8.2 ANSI Driver};DATABASE=bddjeu;");   //connection a la base de données bddjeu
+
+    db.setHostName("127.0.0.1");    //connection locale
     db.setUserName("student");      //avec l'utilisaeur student
     db.setPassword("crif2024sn");   //avec le mot de passe crif2024sn
     if(db.open())                   //si la bdd est ouverte
