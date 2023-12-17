@@ -7,7 +7,7 @@ Pour charger le projet dans l'application qt allez dans modifier puis clique-dro
 
 Si vous etes sur windows il faut enlever le commentaire sur ces deux lignes:
 //QSqlDatabase db = QSqlDatabase::addDatabase("QODBC3");
-//db.setDatabaseName("Driver={MySQL ODBC 8.2 ANSI Driver};DATABASE=test;");
+//db.setDatabaseName("Driver={MySQL ODBC 8.2 ANSI Driver};DATABASE=bddjeu;");
 
 Et mettre en commentaire ces deux lignes :
 QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");	
